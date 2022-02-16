@@ -38,15 +38,18 @@ const ProjectCard = ({
       <LinksContainer>
         {repositoryLink ? (
           <Link href={repositoryLink} target='_blank'>
-            Visite o repositório
+            Repositório
             <img src={githubIcon} alt='Ícone do GitHub' />
           </Link>
         ) : (
-          ""
+          <Link href={repositoryLink} target='_blank' className='disabled'>
+            Repositório
+            <img src={githubIcon} alt='Ícone do GitHub' />
+          </Link>
         )}
 
         <Link href={applicationLink} target='_blank'>
-          Visite a aplicação
+          Aplicação
           <img src={navigationIcon} alt='Ícone de redirecionamento' />
         </Link>
       </LinksContainer>
