@@ -16,4 +16,9 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
 `;
