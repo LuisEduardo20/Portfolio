@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
 
   background-color: var(--black);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
 `;
 
 export const Content = styled.header`
