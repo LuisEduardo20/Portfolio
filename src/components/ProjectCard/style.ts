@@ -62,7 +62,7 @@ export const Description = styled.div`
 export const LinksContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   @media screen and (max-width: 768px) {
     align-items: center;
@@ -71,6 +71,7 @@ export const LinksContainer = styled.div`
 `;
 
 export const Link = styled.a`
+  width: 40%;
   padding: 20px;
   background-color: var(--button-background);
   border-radius: 10px;
@@ -95,7 +96,14 @@ export const Link = styled.a`
     margin-left: 20px;
   }
 
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   @media screen and (max-width: 768px) {
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
   }
