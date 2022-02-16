@@ -1,18 +1,19 @@
 import {
   Container,
   UserSection,
-  Description,
+  MyDescription,
   Title,
   Skills,
   Picture,
   IconsArea,
+  Icon,
 } from "./style";
 
 import css from "../../assets/css.svg";
 import figma from "../../assets/figma.svg";
 import git from "../../assets/git.svg";
 import github from "../../assets/github.svg";
-import heroku from "../../assets/html.svg";
+import heroku from "../../assets/heroku.svg";
 import html from "../../assets/html.svg";
 import js from "../../assets/js.svg";
 import linux from "../../assets/linux.svg";
@@ -35,18 +36,40 @@ const WhoAmI = () => {
           alt='Foto de perfil'
         />
 
-        <Description>
+        <MyDescription>
           <p>
             Olá, me chamo Eduardo, sou desenvolvedor Full Stack React e Node,
             estudante de Sistemas de Informação e apaixonado por aprender!
           </p>
-        </Description>
+        </MyDescription>
       </UserSection>
 
       <Skills>
         <Title>Habilidades</Title>
 
-        <IconsArea></IconsArea>
+        <IconsArea>
+          <Icon src={html} alt='Skill Icon' />
+          <Icon src={css} alt='Skill Icon' />
+          <Icon src={js} alt='Skill Icon' />
+          <Icon src={ts} alt='Skill Icon' />
+          <Icon src={vscode} alt='Skill Icon' />
+        </IconsArea>
+
+        <IconsArea>
+          <Icon src={react} alt='Skill Icon' />
+          <Icon src={node} alt='Skill Icon' />
+          <Icon src={wordpress} alt='Skill Icon' />
+          <Icon src={git} alt='Skill Icon' />
+          <Icon src={github} alt='Skill Icon' />
+        </IconsArea>
+
+        <IconsArea>
+          <Icon src={figma} alt='Skill Icon' />
+          <Icon src={linux} alt='Skill Icon' />
+          <Icon src={mysql} alt='Skill Icon' />
+          <Icon src={postgres} alt='Skill Icon' />
+          <Icon src={heroku} alt='Skill Icon' />
+        </IconsArea>
       </Skills>
     </Container>
   );

@@ -7,7 +7,9 @@ const Main = () => {
   return (
     <Container>
       <WhoAmI />
+
       <Projects />
+
       <Contact />
     </Container>
   );
