@@ -23,9 +23,9 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    height: 80%;
+    height: 100%;
 
-    grid-template-rows: 1fr 30% 50% 1fr;
+    grid-template-rows: 1fr 1.5fr 2fr 1fr;
     gap: 10px;
 
     flex: 0 0 75%;
@@ -63,10 +63,19 @@ export const LinksContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
 `;
 
 export const Link = styled.a`
-  color: var(--black);
+  padding: 20px;
+  background-color: var(--button-background);
+  border-radius: 10px;
+
+  color: var(--white);
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
@@ -74,6 +83,11 @@ export const Link = styled.a`
   transition: filter 0.2s;
 
   &:hover {
-    filter: brightness(2);
+    filter: brightness(0.8);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    margin-bottom: 10px;
   }
 `;
