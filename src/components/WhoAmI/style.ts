@@ -3,16 +3,19 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 90%;
   min-height: 550px;
+  background-color: var(--white);
+
+  margin: 40px 0 40px 0;
 
   border-radius: 10px;
-
-  background-color: var(--white);
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
   @media screen and (max-width: 768px) {
     min-height: 750px;
+
+    margin: 20px 0 20px 0;
 
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
