@@ -4,7 +4,7 @@ import { repositories } from "../../repository";
 
 const Projects = () => {
   const showProjects = repositories.map(
-    ({ name, imgUrl, description, repositoryLink, applicationLink }) => {
+    ({ name, imgUrl, description, repositoryLink, applicationLink }, index) => {
       return (
         <ProjectCard
           title={name}
@@ -12,6 +12,7 @@ const Projects = () => {
           description={description}
           repositoryLink={repositoryLink}
           applicationLink={applicationLink}
+          key={`Projeto ${index + 1}`}
         />
       );
     }
