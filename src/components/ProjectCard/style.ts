@@ -25,7 +25,7 @@ export const Container = styled.div`
   @media screen and (max-width: 768px) {
     height: 100%;
 
-    grid-template-rows: 1fr 1.5fr 2fr 1fr;
+    grid-template-rows: 10% 30% 35% 25%;
     gap: 10px;
 
     flex: 0 0 75%;
@@ -75,15 +75,24 @@ export const Link = styled.a`
   background-color: var(--button-background);
   border-radius: 10px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--white);
   font-weight: 500;
   font-size: 1rem;
   text-decoration: none;
 
-  transition: filter 0.2s;
+  transition: 0.2s;
 
   &:hover {
-    filter: brightness(0.8);
+    background-color: var(--black);
+  }
+
+  & > img {
+    width: 25px;
+    margin-left: 20px;
   }
 
   @media screen and (max-width: 768px) {
