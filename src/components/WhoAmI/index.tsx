@@ -27,7 +27,7 @@ import wordpress from "../../assets/wordpress.svg";
 
 const WhoAmI = () => {
   return (
-    <Container>
+    <Container id='quem-sou-eu'>
       <UserSection>
         <Title>Quem sou eu?</Title>
 
