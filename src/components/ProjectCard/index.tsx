@@ -7,6 +7,9 @@ import {
   Link,
 } from "./style";
 
+import githubIcon from "../../assets/github.svg";
+import navigationIcon from "../../assets/navigation.svg";
+
 interface CardProps {
   title: string;
   imgUrl: string;
@@ -26,21 +29,25 @@ const ProjectCard = ({
     <Container>
       <Title>{title}</Title>
 
-      <Img src={imgUrl} alt='Imagem do projeto' />
+      <a href={applicationLink} target='_blank' rel='noreferrer'>
+        <Img src={imgUrl} alt='Imagem do projeto' />
+      </a>
 
       <Description>{description}</Description>
 
       <LinksContainer>
         {repositoryLink ? (
           <Link href={repositoryLink} target='_blank'>
-            Repositório
+            Visite o repositório
+            <img src={githubIcon} alt='Ícone do GitHub' />
           </Link>
         ) : (
           ""
         )}
 
         <Link href={applicationLink} target='_blank'>
-          Link da aplicação
+          Visite a aplicação
+          <img src={navigationIcon} alt='Ícone de redirecionamento' />
         </Link>
       </LinksContainer>
     </Container>
