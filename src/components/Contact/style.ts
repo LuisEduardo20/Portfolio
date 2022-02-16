@@ -38,7 +38,6 @@ export const Title = styled.h2`
 
 export const Form = styled.form`
   width: 100%;
-  /* background-color: red; */
 
   display: flex;
   align-items: center;
