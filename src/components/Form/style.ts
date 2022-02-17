@@ -88,3 +88,15 @@ export const Submit = styled.button`
     }
   }
 `;
+
+export const ErrorMessage = styled.span`
+  width: 80%;
+  color: red;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
