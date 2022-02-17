@@ -18,7 +18,7 @@ export const Title = styled.h2`
 
 export const ProjectsSlider = styled.ul`
   width: 100%;
-  height: 760px;
+  height: 700px;
   min-width: 0px;
   padding-bottom: 20px;
 
