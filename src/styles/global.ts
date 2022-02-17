@@ -8,6 +8,9 @@ export const GlobalStyle = createGlobalStyle`
     --input-background: #F8F9FA;
     --input-placeholder: #ADB5BD;
     --button-background: #495057;
+
+    --link-background: #3C64DE;
+    --link-hover: #514ef4;
   }
 
   * {
@@ -17,8 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     
     font-family: 'Poppins', sans-serif;
-
-    
   }
 
   *::-webkit-scrollbar {
