@@ -29,7 +29,7 @@ const FormContent = ({ register, errors }: FormProps) => {
         type='text'
         {...register("name")}
         onChange={(input) => {
-          const regex = /[0-9~`!@#$%^&()_={}[\]:;,.<>+\/?-]/g;
+          const regex = /[0-9~`!@#$%^&()_={}[\]:;,.<>+\/?-]/g; //eslint-disable-line
 
           input.target.value = input.target.value.replace(regex, "");
         }}
