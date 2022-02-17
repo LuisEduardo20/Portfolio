@@ -1,14 +1,27 @@
 import emailjs from "emailjs-com";
-import { Container, Title, Form, Input, Text, Submit } from "./style";
+import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-import gmailIcon from "../../assets/gmail.svg";
-import linkedinIcon from "../../assets/linkedin.svg";
+import { Container, Title, Form } from "./style";
+import FormContent from "../Form";
 
 toast.configure();
 
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<Inputs>();
+
   const successNotification = () => {
     toast.success("Email enviado com sucesso!", {
       position: toast.POSITION.BOTTOM_CENTER,
@@ -21,7 +34,7 @@ const Contact = () => {
     });
   };
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (data: any, e: any) => {
     e.preventDefault();
 
     emailjs
@@ -38,40 +51,27 @@ const Contact = () => {
         (error) => {
           errorNotification();
         }
-      );
-    e.target.reset();
+      )
+      .catch((e) => {
+        errorNotification();
+      });
+
+    reset();
   };
+
+  const onSubmit = handleSubmit((data, e) => {
+    sendEmail(data, e);
+  });
 
   return (
     <Container id='contato'>
       <Title>Contato</Title>
 
-      <Form onSubmit={sendEmail}>
-        <Input type='text' name='name' id='name' placeholder='Nome' />
+      {/*TODO Fazer verificações de input  */}
+      {/*TODO Estilizar mensagem de requerido  */}
 
-        <Input type='text' name='email' id='email' placeholder='Email' />
-
-        <Input type='text' name='subject' id='subject' placeholder='Assunto' />
-
-        <Text
-          rows={7}
-          name='message'
-          id='message'
-          placeholder='Mensagem'
-        ></Text>
-
-        <Submit type='submit'>
-          Enviar
-          <img src={gmailIcon} alt='Ícone do Gmail' />
-        </Submit>
-
-        <a
-          href='https://www.linkedin.com/in/luis-eduardo-santos-costa-5369841b3/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img src={linkedinIcon} alt='Ícone do Linkedin' />
-        </a>
+      <Form onSubmit={onSubmit}>
+        <FormContent register={register} errors={errors} />
       </Form>
     </Container>
   );
