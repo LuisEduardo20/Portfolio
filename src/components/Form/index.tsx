@@ -1,48 +1,50 @@
-import React from "react";
-import { Input, Text, Submit } from "./style";
+import { FieldError, UseFormRegister } from "react-hook-form";
+import { Input, Text, Submit, ErrorMessage } from "./style";
 
 import gmailIcon from "../../assets/gmail.svg";
 import linkedinIcon from "../../assets/linkedin.svg";
 
+type Inputs = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 interface FormProps {
-  register: any;
-  errors: any;
+  register: UseFormRegister<Inputs>;
+
+  errors: {
+    name?: FieldError | undefined;
+    email?: FieldError | undefined;
+    subject?: FieldError | undefined;
+    message?: FieldError | undefined;
+  };
 }
 
 const FormContent = ({ register, errors }: FormProps) => {
   return (
     <>
-      {errors.name && <span>O nome é obrigatório</span>}
       <Input
         type='text'
-        {...register("name", { required: true })}
+        {...register("name")}
+        onChange={(input) => {
+          const regex = /[0-9~`!@#$%^&()_={}[\]:;,.<>+\/?-]/g;
+
+          input.target.value = input.target.value.replace(regex, "");
+        }}
         placeholder='Nome *'
       />
+      {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
 
-      {errors.email && <span>O email é obrigatório</span>}
-      <Input
-        type='text'
-        {...register("email", {
-          required: true,
-          pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-        })}
-        id='email'
-        placeholder='Email *'
-      />
+      <Input type='text' {...register("email")} placeholder='Email *' />
+      {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
 
-      {errors.subject && <span>Assunto é obrigatório</span>}
-      <Input
-        type='text'
-        {...register("subject", { required: true })}
-        placeholder='Assunto *'
-      />
+      <Input type='text' {...register("subject")} placeholder='Assunto *' />
+      {errors.subject && <ErrorMessage>{errors.subject.message}</ErrorMessage>}
 
-      {errors.message && <span>A mensagem é obrigatório</span>}
-      <Text
-        rows={7}
-        {...register("message", { required: true })}
-        placeholder='Mensagem'
-      ></Text>
+      <Text rows={7} {...register("message")} placeholder='Mensagem *'></Text>
+      {errors.message && <ErrorMessage>{errors.message.message}</ErrorMessage>}
 
       <Submit type='submit'>
         Enviar
