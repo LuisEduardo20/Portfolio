@@ -73,7 +73,7 @@ export const LinksContainer = styled.div`
 export const Link = styled.a`
   width: 40%;
   padding: 20px;
-  background-color: var(--button-background);
+  background-color: var(--link-background);
   border-radius: 10px;
 
   display: flex;
@@ -88,7 +88,7 @@ export const Link = styled.a`
   transition: 0.2s;
 
   &:hover {
-    background-color: var(--black);
+    background-color: var(--link-hover);
   }
 
   & > img {
