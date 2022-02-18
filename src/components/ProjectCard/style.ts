@@ -57,6 +57,10 @@ export const Description = styled.div`
   background-color: var(--black);
   color: var(--white);
   border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+    overflow-y: scroll;
+  }
 `;
 
 export const LinksContainer = styled.div`
