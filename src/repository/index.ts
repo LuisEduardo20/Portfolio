@@ -1,14 +1,23 @@
+//!Template
+// {
+//   name: "",
+//   imgUrl: "",
+//   description: "",
+//   applicationLink: "",
+//   repositoryLink: "",
+// },
 export const repositories = [
   {
-    //!Template
-    // {
-    //   name: "",
-    //   imgUrl: "",
-    //   description: "",
-    //   applicationLink: "",
-    //   repositoryLink: "",
-    // },
+    name: "Pokedex React",
+    imgUrl:
+      "https://cdn.discordapp.com/attachments/914144800050143242/1078287743551017000/image.png",
+    description:
+      "Pokedex web desenvolvida com React, Typescript e outras tecnologias",
+    applicationLink: "https://pokedex-react-sable.vercel.app/home",
+    repositoryLink: "https://github.com/LuisEduardo20/pokedex_react",
+  },
 
+  {
     name: "NUTES_Coronavirus",
     imgUrl:
       "https://cdn.discordapp.com/attachments/914144800050143242/943504746017329232/unknown.png",
@@ -34,8 +43,7 @@ export const repositories = [
       "https://cdn.discordapp.com/attachments/914144800050143242/943504434451849308/unknown.png",
     description:
       "Um pesquisador de usuários do GitHub onde é possível ver informações como repositórios públicos, quantidade de seguidores e etc...",
-    applicationLink:
-      "https://github-searcher-v2.vercel.app",
+    applicationLink: "https://github-searcher-v2.vercel.app",
     repositoryLink:
       "https://github.com/LuisEduardo20/GitHub-searcher-2.0",
   },
@@ -46,8 +54,7 @@ export const repositories = [
       "https://cdn.pixabay.com/photo/2021/02/09/23/31/stark-6000364_960_720.jpg",
     description:
       "Uma API feita em Typescript com Express que armazena dados dos principais personagens da série de TV como: nome, livros em que participa, casas a que pertence etc...",
-    applicationLink:
-      "https://desafio-mobix-backend.herokuapp.com/characters",
+    applicationLink: "",
     repositoryLink:
       "https://github.com/LuisEduardo20/desafio_mobix-backend",
   },
@@ -58,8 +65,7 @@ export const repositories = [
       "https://cdn.discordapp.com/attachments/914144800050143242/943962548154302565/unknown.png",
     description:
       "Um cronômetro feito com HTML, CSS e JavaScript como forma de estudo e práticas de novos conhecimentos.",
-    applicationLink:
-      "https://web-chronometer-six.vercel.app/",
+    applicationLink: "https://web-chronometer-six.vercel.app/",
     repositoryLink:
       "https://github.com/LuisEduardo20/Web-chronometer",
   },
@@ -70,9 +76,7 @@ export const repositories = [
       "https://cdn.discordapp.com/attachments/914144800050143242/943966624933900358/unknown.png",
     description:
       "Meu portifólio construído com ReactJs, TypeScript e protótipo no Figma.",
-    applicationLink:
-      "https://portifolio-luiseduardo20.vercel.app/",
-    repositoryLink:
-      "https://github.com/LuisEduardo20/Portifolio",
+    applicationLink: "https://portifolio-luiseduardo20.vercel.app/",
+    repositoryLink: "https://github.com/LuisEduardo20/Portifolio",
   },
 ];
