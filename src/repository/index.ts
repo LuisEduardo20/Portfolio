@@ -8,6 +8,17 @@
 // },
 export const repositories = [
   {
+    name: "Guess The Color",
+    imgUrl:
+      "https://cdn.discordapp.com/attachments/914144800050143242/1107994018526281758/image.png",
+    description:
+      "Um jogo de múltiplas escolhas cujo objetivo é adivinhar o hexadecimal da cor apresentada",
+    applicationLink: "https://react-guess-the-color-game.vercel.app/",
+    repositoryLink:
+      "https://github.com/LuisEduardo20/Guess_The_Color",
+  },
+
+  {
     name: "Pokedex React",
     imgUrl:
       "https://cdn.discordapp.com/attachments/914144800050143242/1078287743551017000/image.png",
